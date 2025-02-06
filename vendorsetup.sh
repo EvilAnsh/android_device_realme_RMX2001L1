@@ -5,7 +5,7 @@ echo 'Cloning RM6785-common Device tree [1/5]'
 rm -rf device/realme/RM6785-common
 if [ ! -d "device/realme/RM6785-common" ]; then
     mkdir -p device/realme/RM6785-common
-    git clone https://github.com/EvilAnsh/android_device_realme_RM6785-common --depth 1 -b flare device/realme/RM6785-common
+    git clone https://github.com/EvilAnsh/android_device_realme_RM6785-common --depth 1 -b 15.0 device/realme/RM6785-common
 fi
 
 echo 'Cloning RM6785-common Vendor tree [2/5]'
@@ -21,7 +21,7 @@ echo 'Cloning Kernel tree [3/5]'
 rm -rf kernel/realme/mt6785
 if [ ! -d "kernel/realme/mt6785" ]; then
     mkdir -p kernel/realme/mt6785
-    git clone https://github.com/kardebayan/kernel_realme_mt6785 --depth 1 -b fifteen kernel/realme/mt6785
+    git clone https://github.com/kardebayan/android_kernel_realme_mt6785 --depth 1 -b fifteen kernel/realme/mt6785
 fi
 
 echo 'Cloning Mediatek SEpolicy_vndr [4/5]'
