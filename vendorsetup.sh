@@ -1,18 +1,3 @@
-echo 'Starting to sign the build'
-#!/bin/bash
-# Check if the key generation script has been executed before
-KEY_GEN_FLAG=".key_gen_done"
-if [ ! -f $KEY_GEN_FLAG ]; then
-    echo "Downloading and generating keys..."
-    curl -O https://raw.githubusercontent.com/ofcsayan/Key-Gen-signed-script/main/generate_all_keys.sh
-    chmod +x generate_all_keys.sh
-    ./generate_all_keys.sh
-    # Create the flag file to indicate script has run
-    touch $KEY_GEN_FLAG
-else
-    echo "Key generation already completed. Skipping..."
-fi
-
 echo 'Starting to clone stuffs needed for your device'
 
 echo 'Cloning RM6785-common Device tree [1/5]'
@@ -36,7 +21,7 @@ echo 'Cloning Kernel tree [3/5]'
 rm -rf kernel/realme/mt6785
 if [ ! -d "kernel/realme/mt6785" ]; then
     mkdir -p kernel/realme/mt6785
-    git clone https://github.com/kardebayan/kernel_realme_mt6785 --depth 1 -b fifteen kernel/realme/mt6785
+    git clone https://github.com/kardebayan/android_kernel_realme_mt6785 --depth 1 -b fifteen kernel/realme/mt6785
 fi
 
 echo 'Cloning Mediatek SEpolicy_vndr [4/5]'
