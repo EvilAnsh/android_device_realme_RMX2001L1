@@ -20,3 +20,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # CORE build flags
 WITH_GMS := true
 TARGET_USES_PICO_GAPPS := true
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="sys_oplus_mssi_64_cn-user 11 RP1A.200720.011 1623809323039 release-keys" \
+    BuildFingerprint=realme/RMX2002/RMX2002L1:11/RP1A.200720.011/1651754371157:user/release-keys \
+    DeviceProduct=RMX2002
