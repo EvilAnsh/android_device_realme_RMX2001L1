@@ -13,7 +13,7 @@ echo 'Cloning RM6785-common Vendor tree [2/5]'
 rm -rf vendor/realme/RM6785-common
 if [ ! -d "vendor/realme/RM6785-common" ]; then
     mkdir -p vendor/realme/RM6785-common
-    git clone https://github.com/realme-mt6785-devs/proprietary_vendor_realme_RM6785-common --depth 1 -b lineage-22 vendor/realme/RM6785-common
+    git clone https://github.com/realme-mt6785-devs/proprietary_vendor_realme_RM6785-common --depth 1 -b lineage-22.1 vendor/realme/RM6785-common
 fi
 
 echo 'Cloning Kernel tree [3/5]'
@@ -21,7 +21,7 @@ echo 'Cloning Kernel tree [3/5]'
 rm -rf kernel/realme/mt6785
 if [ ! -d "kernel/realme/mt6785" ]; then
     mkdir -p kernel/realme/mt6785
-    git clone https://github.com/kardebayan/android_kernel_realme_mt6785 --depth 1 -b fifteen kernel/realme/mt6785
+    git clone https://github.com/realme-mt6785-devs/android_kernel_realme_mt6785.git --depth 1 -b lineage-22.2 kernel/realme/mt6785
 fi
 
 echo 'Cloning Mediatek SEpolicy_vndr [4/5]'
@@ -29,14 +29,14 @@ echo 'Cloning Mediatek SEpolicy_vndr [4/5]'
 rm -rf device/mediatek/sepolicy_vndr
 if [ ! -d "device/mediatek/sepolicy_vndr" ]; then
     mkdir -p device/mediatek/sepolicy_vndr
-    git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git --depth 1 -b lineage-22.1 device/mediatek/sepolicy_vndr 
+    git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr.git --depth 1 -b lineage-22.2 device/mediatek/sepolicy_vndr 
 fi
 echo 'Cloning Hardware Mediatek [5/5]'
 # Hardware
 rm -rf hardware/mediatek
 if [ ! -d "hardware/mediatek" ]; then
     mkdir -p hardware/mediatek
-    git clone https://github.com/LineageOS/android_hardware_mediatek.git --depth 1 -b lineage-22.1 hardware/mediatek
+    git clone https://github.com/LineageOS/android_hardware_mediatek.git --depth 1 -b lineage-22.2 hardware/mediatek
 fi
 
 echo 'Completed, Now proceeding to lunch'
